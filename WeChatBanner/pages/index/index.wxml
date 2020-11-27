@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+    <swiper class='bannerSwiper' previous-margin="80rpx" next-margin='80rpx' indicator-dots="true" indicator-color='#999' indicator-active-color='#fff' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+      duration="{{duration}}" bindchange='onChange' circular='true'>
+      <block wx:for="{{banner}}">
+        <swiper-item>
+          <image  class="{{index==selindex?'imageBanner':'imageBanner_small'}}" style="background:{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
